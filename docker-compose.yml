@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  wordpress:
+    image: wordpress:latest
+    ports:
+      - '8000:80'
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: '' # Or set a password if you choose
+      WORDPRESS_DB_NAME: collectors
+    volumes:
+      - wordpress_data:/var/www/html
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+      MYSQL_DATABASE: collectors
+      # MYSQL_USER: root
+      # MYSQL_PASSWORD: '' # Or set a password if you choose
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  wordpress_data:
+  db_data:
