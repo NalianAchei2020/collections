@@ -56,8 +56,10 @@ define( 'AUTH_SALT',        'lG7$EHc01?ElSP(2vmh=@ska#YCdm+-f1CX86}5-xr^d0G!|ftj
 define( 'SECURE_AUTH_SALT', '!}+.|9QPndQtl+kddpt|Kh&<N#(M+:{0p8t[f!I(e>bCQheZZKELGrgtqK:O6/.n' );
 define( 'LOGGED_IN_SALT',   'x0N]VR&[q&**;Z%jEUl5W]7[O)Y!Vds4aTId@h<y+7?)1D@DKajumokAjo;Gi{j[' );
 define( 'NONCE_SALT',       'zR3`I;hV%*BL2oK1=bScJ^HP3o;D{EQ=Ytd4UU>Bc/>V7;Wm2rnMmcdW^1krvbG,' );
+define( 'GRAPHQL_JWT_AUTH_SECRET_KEY', ';&C~6[<s%_s$@~(_EyZ(yvG9^x,Dxs+63}r[*7g0tV5eUs=N?ik+6?;AH!r.57z!' );
 
 /**#@-*/
+define('GRAPHQL_DEBUG', true);
 
 /**
  * WordPress database table prefix.
@@ -79,7 +81,11 @@ $table_prefix = 'wp_';
  *
  * @link https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/
  */
-define( 'WP_DEBUG', false );
+//define( 'WP_DEBUG', false );
+define('WP_DEBUG', true);
+define('WP_DEBUG_LOG', true);
+define('WP_DEBUG_DISPLAY', false);
+define('SAVEQUERIES', true);
 
 /* Add any custom values between this line and the "stop editing" line. */
 
